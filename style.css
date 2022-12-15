@@ -1,0 +1,87 @@
+:root {
+    --calculator: #22252D;
+    --btn-background: #272B33;
+    --num-font-color: #FEFEFE;
+    --numpad-background: #292D36;
+    --operator-btn-font-color: #F47A7A;
+    --misc-btn-font-color: #27FBD4;
+    --swiper-color: #454950;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: var(--calculator);
+    height: 700px;
+    width: 380px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.output {
+    color: var(--num-font-color);
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.numpad {
+    background: var(--numpad-background);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 20px;
+    gap: 10px;
+    border-radius: 25px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 50px;
+
+}
+
+button {
+    aspect-ratio: 1;
+    background-color: var(--btn-background);
+    color: var(--num-font-color);
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+.operator {
+    color: var(--operator-btn-font-color);
+}
+
+:is(.clear, .sign, .percent) {
+    color: var(--misc-btn-font-color);
+}
+
+.swiper {
+    height: 5px;
+    width: 150px;
+    background: var(--swiper-color);
+    position: absolute;
+    bottom: 20px;
+    left: 115px;
+    border-radius: 10px;
+}
